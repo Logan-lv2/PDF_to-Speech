@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL-NOTE App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Calculatrice -->
+    <div class="calculator">
+        <h1>SCHOOL-NOTE</h1>
+        <input type="text" id="display" readonly>
+        <div class="buttons-grid">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">×</button>
+            
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            
+            <button onclick="calculate()" class="equals">=</button>
+        </div>
+    </div>
+
+    <!-- Lecteur PDF Audio -->
+    <div class="audio-converter">
+        <h1>LISEUR DE PDF</h1>
+        <img src="/static/audio-bot.jpg" class="audio-bot" alt="Bot Audio">
+        <input type="file" id="pdf-upload" accept=".pdf">
+        <button onclick="convertPdfToAudio()">➤ Convertir en Audio</button>
+        <audio id="audio-player" controls hidden></audio>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/script.js"></script>
+    <script src="/static/audio.js"></script>
+</body>
+</html>
